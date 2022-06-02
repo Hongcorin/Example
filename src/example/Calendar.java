@@ -30,8 +30,13 @@ public class Calendar {
 		int replay = scan.nextInt();
 		
 		for(int i = 0; i < replay; i++)	{
+			
 			System.out.println("달을 입력하세요");
 			int month = scan.nextInt();	
+			
+				if(month < 0) {
+					System.out.println("Have a nice day!");	
+				}
 			System.out.printf("%d월은 %d일 까지 있습니다\n", month, cal.getMaxDaysOfMonth(month));
 		}
 		System.out.println("good bye");
