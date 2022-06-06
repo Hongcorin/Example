@@ -1,20 +1,31 @@
 package example;
 
-//import java.util.Scanner;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Ex01 {
 
 	public static void main(String[] args) {
 		
-		int[] arr1 = new int[10]; 
-		int[] arr2 = {10,20,30};
-		char[] arr3 = new char[10];
-		char[] arr4;
-		arr4 = new char[]{'A','B','C','D'};
+		ArrayList<String> schedule = new ArrayList<>(5);
+		final int count = 5;
 		
-		System.out.println(arr4);
-		System.out.println(Arrays.toString(arr4));
+		Scanner scanner = new Scanner(System.in);
+		String newSchedule;
+		
+		for(int i = 1; i < count; i++) {
+			System.out.print("일정을 등록 하세요");
+			newSchedule = scanner.nextLine();
+			schedule.add(newSchedule);
+		}
+		
+		
+		System.out.println("==========");
+		
+		for(String s : schedule) {
+			System.out.println(s);
+		}
+		System.out.println("==========");
 
 		
 	}
